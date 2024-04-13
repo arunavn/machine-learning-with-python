@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title> Heart Disease Percent </title>
+	</head>
+	
+	<body style = "background: #000;">
+		<div class = "login">
+			<h1 style = "color:Violet;"> Heart Disease Predictor </h1>
+			<form action = "{{url_for('predict')}}"method="post">
+				<input type="text" name="Percent Biking" placeholder="Percent population biking" required="required" /><br>
+				<input type="text" name="Percent Smoking" placeholder="Percent population smoking" required="required" />
+				
+				<p>
+				<button type="submit" class="btn btn-primary btn-block btn-large">Population with Heart Disease</button>
+				</p>
+			</form>
+			
+			<br>
+			<br>
+			<h4 style="color:violet;">
+			{{ prediction_text }} </h4>
+		</div>
+	</body>
+</html>
